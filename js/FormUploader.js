@@ -151,7 +151,7 @@ const FormUploader = {
         this.savedFiles = [];
         this.activateSubmitButton();
         FormImagePreview.reset();
-        EventForm.setCurrenTime();
+        Calendar.setCurrenTime();
         document.getElementById("event-id").value = 0;
         document.getElementById("event-color").value = getRandomBrightColor();
         document.getElementById('event-form-title').innerHTML='Ajouter un événement';

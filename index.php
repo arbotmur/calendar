@@ -56,13 +56,11 @@ function getRandomFileFromFolder($folderPath) {
     </script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="js/Ajax.js"></script>
     <script src="js/FormImagePreview.js"></script>
     <script src="js/ProgressBarManager.js"></script>
     <script src="js/FormUploader.js"></script>
     <script src="js/Gallery.js"></script>
-    <script src="js/LazyLoad.js"></script>
-    <script src="js/Events.js"></script>
+
     <script src="js/Calendar.js"></script>
     <script src="js/script.js"></script>
 </body>

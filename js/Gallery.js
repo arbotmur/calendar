@@ -45,11 +45,7 @@ function Gallery() {
                     }
                     else{
                         imagesDiv.appendChild(image);
-                    }
-                    
-
-
-                    
+                    }                    
                 }
             }
 
@@ -113,7 +109,6 @@ function Gallery() {
                 newImage.classList.add("fadein");
                 imageContainer.removeChild(image);
             };
-            //image.src = images[newIndex];
             this.index = newIndex;
         },
 
