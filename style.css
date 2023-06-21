@@ -42,6 +42,7 @@ body {
 @media (orientation: landscape) {
     body {
         padding: 2em;
+        padding-top:0;
     }
 
     .container {

@@ -16,7 +16,7 @@
         </div>
     </div>
     <label for="event-user">Votre nom:</label>
-    <input type="text" id="event-user" name="user" placeholder="Votre nom" required />
+    <input type="text" id="event-user" name="user" placeholder="Votre nom" value="<?php echo $_SESSION['user'] ??'';?>" required />
     <br />
     <label for="event-title">Titre:</label>
     <input type="text" id="event-title" name="name" placeholder="titre" required />

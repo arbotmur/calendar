@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include_once 'functions.php';
 include_once 'lib/Event.php';
 
@@ -10,8 +12,8 @@ $event = $_POST['id'] == 0 ? $EventLib->create($_POST) : $EventLib->update($_POS
  */
 $params = [
     "topic"=> "ecoletallende",
-    "title"=> ($_POST['name']??''),
-    "message"=> ($_POST['description']??'')
+    "title"=> $_SESSION['user'].': '.($_POST['name']??''),
+    "message"=> 'Le '.date('d/m/y',strtotime($_POST['date']))."\n".($_POST['description']??'')
 ];
 
 if(isset($_POST['fileUrl'])){
