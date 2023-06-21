@@ -15,6 +15,9 @@
             <input type="color" id="event-color" name="color" value="#f9d309"/>
         </div>
     </div>
+    <label for="event-user">Votre nom:</label>
+    <input type="text" id="event-user" name="user" placeholder="Votre nom" required />
+    <br />
     <label for="event-title">Titre:</label>
     <input type="text" id="event-title" name="name" placeholder="titre" required />
     <br />

@@ -393,7 +393,7 @@ let Calendar = {
         // Retrieve the event object from the collection
         let evenement = this.evenements[key];
 
-        let { id, name, color, date, time, description, fileUrl } = evenement;
+        let { id, name, color, date, time, description, fileUrl, user } = evenement;
 
         let eventDiv = document.createElement("div");
         eventDiv.id = `event-${id}`;
@@ -403,10 +403,17 @@ let Calendar = {
         eventDiv.dataset.description = description;
         eventDiv.dataset.color = color || getRandomBrightColor();
         eventDiv.dataset.id = id;
+        eventDiv.dataset.user = user;
 
         // Create the event title element
         let titleDiv = document.createElement("h2");
         titleDiv.textContent = evenement.name;
+
+        // Create the user title element
+        let userDiv = document.createElement("div");
+        userDiv.textContent = 'Par '+evenement.user;
+        userDiv.style.fontSize = 'small';
+        userDiv.style.color = '#666666';
 
         // Create the colored dot element
         let dotDiv = document.createElement("span");
@@ -488,6 +495,7 @@ let Calendar = {
         // Append all elements to the event container
         eventDiv.appendChild(dateDiv);
         eventDiv.appendChild(titleDiv);
+        eventDiv.appendChild(userDiv);
         eventDiv.appendChild(descriptionDiv);
         eventDiv.appendChild(imagesDiv);
         eventDiv.appendChild(iconsContainer);
@@ -513,6 +521,7 @@ let Calendar = {
         document.getElementById("event-color").value = eventData.color;
         document.getElementById("event-title").value = eventData.name;
         document.getElementById("event-text").value = eventData.description;
+        document.getElementById("event-user").value = eventData.user;
 
         //On crée une galerie pour voir les images déjà uploadées
         $("#image-preview").html(new Gallery().init(eventData.fileUrl, true, true));

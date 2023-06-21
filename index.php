@@ -43,7 +43,7 @@ function getRandomFileFromFolder($folderPath) {
     <p>Nous vous remercions de noter sur le calendrier quand vous êtes allés au jardin et ce que vous y avez fait (arrosage, désherbage, cueillette) ainsi que les jours où vous compter y aller. Vous pouvez ajouter des photos. </p>
     <div class="toolbar">
         <button id="calendarToogle" class="selected"><i class="fa-solid fa-calendar"></i> Voir le calendrier</button> 
-        <button id="eventListButton"><i class="fa-solid fa-list"></i> Voir la liste des événements</button> 
+        <button id="eventListButton" style="display:none"><i class="fa-solid fa-list"></i> Voir la liste des événements</button>  
         <button id="addEvent"><i class="fa-solid fa-calendar-plus"></i> Ajouter un événement</button>
     </div>
     <div id="events-list" class="block"></div>

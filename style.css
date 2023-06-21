@@ -467,7 +467,7 @@ button:hover,
     border: 1px solid #ccc;
     display: inline-block;
     height: 120px;
-    overflow: scroll;
+    overflow: auto;
     box-sizing: border-box;
 }
 
