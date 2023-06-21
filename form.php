@@ -22,7 +22,7 @@
     <input type="text" id="event-title" name="name" placeholder="titre" required />
     <br />
     <label for="event-text">Votre texte:</label>
-    <textarea id="event-text" placeholder="Votre texte" name="description" required></textarea>
+    <textarea id="event-text" placeholder="Votre texte" name="description" required rows="10"></textarea>
     <br />
     <label for="event-images">Ajoutez des photos:</label>
     <div class="file-input">

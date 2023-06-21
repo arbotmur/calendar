@@ -59,9 +59,9 @@ class Event
         $events = $this->getEventsFromFile($filePath);
 
         $event['id'] = $id == 0 ? $this->generateUniqueId() : $id;
-        $events[$event['id']]['path'] = $filePath;
-        $events[$event['id']] = $event;
+        $event['path'] = $filePath;
 
+        $events[$event['id']] = $event;
         $this->saveEventsToFile($filePath, $events);
 
         return $event;

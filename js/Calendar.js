@@ -268,7 +268,12 @@ let Calendar = {
             let dayCell = document.createElement('div');
             dayCell.classList.add('day');
             dayCell.classList.add('header');
-            dayCell.textContent = jour;
+
+            let dayCellLabel = document.createElement('span');
+            dayCellLabel.textContent = jour;
+
+            dayCell.appendChild(dayCellLabel);
+
             calendarElement.appendChild(dayCell);
         }
     },
@@ -428,7 +433,8 @@ let Calendar = {
 
         // Create the event description element
         let descriptionDiv = document.createElement("div");
-        descriptionDiv.textContent = description;
+        descriptionDiv.innerHTML = description;
+        descriptionDiv.classList.add("description");
 
         // Create the image gallery element
         let imagesDiv = new Gallery().init(fileUrl, noLazy);
