@@ -597,3 +597,7 @@ button:hover,
     margin-right: 5px;
     padding: 3px 6px;
 }
+
+.applink a{
+    text-decoration: none;
+}
