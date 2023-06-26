@@ -44,8 +44,8 @@ function getRandomFileFromFolder($folderPath)
 <body style="/*background-image:url('/img/bg/<?php echo getRandomFileFromFolder(__DIR__ . '/img/bg/') ?>');*/">
     <h1>Planning du jardin</h1>
     <?php
-    
-    if (isset($_GET['password']) &&sha1($_GET['password']) == '7ec37b154f11849256633827e3670108103a79c3') {
+
+    if (isset($_GET['password']) && sha1($_GET['password']) == '7ec37b154f11849256633827e3670108103a79c3') {
         $_SESSION['user'] = $_GET['user'];
     }
     if (!isset($_SESSION['user'])) {
@@ -54,28 +54,22 @@ function getRandomFileFromFolder($folderPath)
         echo '<form method><input type="text" name="user" value="' . ($_GET['user'] ?? '') . '" placeholder="Nom d\'utilisateur"/>
         <input type="password" name="password" value="' . ($_GET['password'] ?? '') . '" placeholder="Mot de passe"/>
         <input type="submit" name="submit" value="Se connecter" class="btn"/>
-        </form>
-        
-        <footer>
-            <div class="container"></div>
-        </footer>
-        ';
+        </form>';
     } else {
 
 
     ?>
         <div class="container">
 
-            <p>Chers parents, <br/><br/>Ce site nous permet, enseignants et parents, de nous coordonner pour gérer le jardin des petits de façon collective.</p>
+            <p>Chers parents, <br />Ce site nous permet, enseignants et parents, de nous coordonner pour gérer le jardin des petits de façon collective.</p>
             <p>Le principe est de nous aider à entretenir ce jardin, en échange de bons moments avec vos enfants et de quelques légumes à ramasser pendant l'été lorsqu'ils sont prêts! Vous pouvez ramasser tomates et courgettes durant l'été, lorsque nous n'avons pas école. Laissez aux élèves le plaisir de sortir les pommes de terre, de ramasser courges, tomates et courgettes à la rentrée des classes. Nous les utiliserons pour la soupe d'automne.</p>
 
             <p>Nous vous remercions de noter sur le calendrier quand vous êtes allés au jardin et ce que vous y avez fait (arrosage, désherbage, cueillette) ainsi que les jours où vous compter y aller. Vous pouvez ajouter des photos du jardin, de votre récolte. </p>
             <p style="font-weight:bold;">Bon jardinage</p>
-            <div class="toolbar">
-                <button id="calendarToogle" class="selected"><i class="fa-solid fa-calendar"></i> Voir le calendrier</button>
-                <button id="eventListButton" style="display:none"><i class="fa-solid fa-list"></i> Voir la liste des événements</button>
-                <button id="addEvent"><i class="fa-solid fa-calendar-plus"></i> Ajouter un événement</button>
-            </div>
+            <button id="calendarToogle" class="selected"><i class="fa-solid fa-calendar"></i> Voir le calendrier</button>
+            <button id="eventListButton" style="display:none"><i class="fa-solid fa-list"></i> Voir la liste des événements</button>
+            <button id="addEvent"><i class="fa-solid fa-calendar-plus"></i> Ajouter un événement</button>
+        </div>
         </div>
         <div id="events-list" class="block"></div>
         <div id="calendar" class="block"></div>
